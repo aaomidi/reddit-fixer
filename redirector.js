@@ -3,6 +3,6 @@ chrome.webRequest.onBeforeRequest.addListener((event) => {
 	url.hostname = 'old.reddit.com'
 	return {redirectUrl: url.href}
 }, {
-	urls: ['*://reddit.com/*', '*://www.reddit.com/*'],
+	urls: ['*://reddit.com/*', '*://www.reddit.com/*', '*://redd.it/*'],
 	types: ['main_frame', 'sub_frame']
 }, ['blocking']);
